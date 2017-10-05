@@ -3,7 +3,7 @@ import sys
 def create_diamond(letter):
     if(len(letter) != 1):
         print("Too many letters for this here diamond machine. Just use one")
-    letter.upper()
+    letter = letter.upper()
     
     lines = []
 
