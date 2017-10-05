@@ -20,6 +20,9 @@ def create_diamond(letter):
     return '\n'.join(lines)
 
 if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Give me a letter, and I give you a diamond. No freebies! [Needs one 'char' arg]")
+        quit()
     print(create_diamond(sys.argv[1]))
 
 
