@@ -8,17 +8,16 @@ def create_diamond(letter):
     lines = []
 
     # Create top half of diamond
+    letters = ""
     for i in range(ord('A'), ord(letter) + 1):
         # Create a line padded with enough spaces to center align
         line = ' ' * (ord(letter) - i)
  
-        letters = ""
-        for j in range(ord('A'), i + 1):
-            letters += chr(j)
+        letters += chr(i)
 
         # Add reversed string minus last char
-        letters = letters + letters[-2::-1]
-        line += letters
+        symmetrical = letters + letters[-2::-1]
+        line += symmetrical
 
         lines.append(line)
     
